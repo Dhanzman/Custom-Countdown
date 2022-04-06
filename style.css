@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  font-family: Nunito;
+  font-family: Nunito, sans-serif;
   margin: 0;
   min-height: 100vh;
   overflow-y: hidden;
@@ -84,7 +84,7 @@ input {
   border-radius: 20px;
   background: #fff;
   outline: none;
-
+  font-family: Nunito, sans-serif;
 }
 
 /* Button */
@@ -101,15 +101,18 @@ button {
   outline: none;
 }
 
-
+button:hover {
+  filter: brightness(110%);
+}
 
 /* Countdown */
 ul {
   margin-left: -45px;
+  display: flex;
+  flex-direction: row;
 }
 
 li {
-
   font-size: 30px;
   list-style-type: none;
   padding: 10px;
@@ -126,6 +129,33 @@ li span {
 .complete {
   position: relative;
   top: 60px;
+}
+
+.complete-title {
+  animation: complete 4s infinite;
+}
+
+@keyframes complete {
+  0% {
+    color: rgb(203, 48, 48);
+  }
+  
+  25% {
+    color: rgb(210, 230, 25);
+  }
+
+  50% {
+    color: rgb(48, 203, 105);
+    transform: scale(1.5);
+  }
+
+  75% {
+    color: rgb(14, 35, 221);
+  }
+
+  100% {
+    color: rgb(203, 48, 48);
+  }
 }
 
 

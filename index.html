@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Countdown</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+     <!-- Favicons links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon_io/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon_io/android-chrome-192x192.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +21,7 @@
     <!-- Container -->
     <div class="container">
         <!-- Input -->
-        <div class="input-container" id="input-container">
+        <div class="input-container" id="input-container" >
             <h1>Create a Custom Countdown</h1>
             <form class="form" id="countdownForm">
                 <label for="title">Title</label>
@@ -25,6 +30,23 @@
                 <input type="date" id="date-picker">
                 <button type="submit">Submit</button>
             </form>
+        </div>
+        <!-- Countdown -->
+        <div class="countdown" id="countdown"hidden>
+            <h1 id="countdown-title"></h1>
+            <ul>
+                <li><span></span>Days</li>
+                <li><span></span>hours</li>
+                <li><span></span>Miniutes</li>
+                <li><span></span>Seconds</li>
+            </ul>
+            <button id="countdown-button">Reset</button>
+        </div>
+        <!-- Complete -->
+        <div class="complete" id="complete" hidden>
+            <h1 class="complete-title">Countdown Complete</h1>
+            <h1 id="complete-info"></h1>
+            <button id="complete-button">New Countdown</button>
         </div>
     </div>
     <!-- Script -->
