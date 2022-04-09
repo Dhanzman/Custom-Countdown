@@ -1,6 +1,7 @@
 const inputContainer = document.getElementById('input-container');
 const countdownForm = document.getElementById('countdownForm');
 const dateEl = document.getElementById('date-picker');
+const titleEl = document.getElementById('title');
 // Variables for the Countdown
 const countdownEl = document.getElementById('countdown');
 const countdownElTitle = document.getElementById('countdown-title');
@@ -65,8 +66,13 @@ function updateDOM() {
 // Take Values from Form Input
 function updateCountdown(e) {
   e.preventDefault();
-  countdownTitle = e.srcElement[0].value;
-  countdownDate = e.srcElement[1].value;
+  // countdownTitle = e.srcElement[0].value;
+  // countdownDate = e.srcElement[1].value;
+  // or
+  countdownTitle = titleEl.value;
+  countdownDate = dateEl.value;
+
+  console.log(countdownTitle, countdownDate);
   savedCountdown = {
     title: countdownTitle,
     date: countdownDate,
